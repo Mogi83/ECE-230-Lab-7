@@ -23,26 +23,25 @@ module twos_compliment(
 //   full_adder fa6(~A[6], zero, c6, Y[6], c7);
 //   full_adder fa7(~A[7], zero, c7, Y[7], unused);
 
-  wire [7:0] carry
-  genvar i,
+  wire [7:0] carry;
+  genvar i;
   generate
-  full_adder lsb (
-    .A(~A[0]),
-    .B(1'b1),
-    .Y(Y[0]),
-    .Cin(1'b0),
-    .Cout(carry[0])
-  );
+      full_adder lsb (
+        .A(~A[0]),
+        .B(1'b1),
+        .Y(Y[0]),
+        .Cin(1'b0),
+        .Cout(carry[0])
+      );
 
-  for(i=1; i<8, i=i+1)
-    full_adder add(
-      .A(~A[i]),
-      .B(1'b0),
-      .Y(Y[i])
-      .Cin(carry[i-1]),
-      .Cout(carry[i])
-  );
+      for(i=1; i<8; i=i+1)
+        full_adder add(
+          .A(~A[i]),
+          .B(1'b0),
+          .Y(Y[i]),
+          .Cin(carry[i-1]),
+          .Cout(carry[i])
+      );
 
-end
 endgenerate
 endmodule 
