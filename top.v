@@ -20,8 +20,8 @@ module top (
     .Borrow(led[1])
   );
 
-  // ones complement 
-  ones_complement inst(
+  // ones compliment 
+  ones_compliment inst(
     .A(sw[5:2]),
     .B(sw[9:6]),
     .Y(led[5:2])
