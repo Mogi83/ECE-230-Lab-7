@@ -19,5 +19,12 @@ module top (
     .Y(led[0]),
     .Borrow(led[1])
   );
+
+  // ones complement 
+  ones_complement inst(
+    .A(sw[5:2]),
+    .B(sw[9:6]),
+    .Y(led[5:2])
+  );
   
 endmodule
