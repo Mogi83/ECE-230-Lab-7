@@ -3,10 +3,10 @@ module twos_compliment(
   output [7:0] Y // and for Y
 );
 
-wire zero;                           // declaring wire 'zero'
-assign zero = 0;                    // connect that wire to 0
-wire one;                           // declaring wire 'one'
-assign one =   ;                    // connect that wire to 1
+wire zero;                         // declaring wire 'zero'
+assign zero = 0;                   // connect that wire to 0
+wire one;                          // declaring wire 'one'
+assign one = 1;                    // connect that wire to 1
 
 wire c1, c2, c3, c4, c5, c6, c7;    // carries inside chain 1
 wire unused;                        // final carry, not needed
