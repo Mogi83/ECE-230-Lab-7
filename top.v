@@ -1,19 +1,10 @@
 module top (
-  input [13:0]sw,
-  output [9:0]led
+  input [9:0] sw,
+  output [13:0] led
 );
-
-  // full adder
-  full_adder inst(
-      .A(sw[0]),
-      .B(sw[1]),
-      .Cin(1'b0),
-      .Y(led[0]),
-      .Cout(led[1])
-  );
   
   // half subtractor
-  half_sub inst(
+  half_sub half_inst(
     .A(sw[0]),
     .B(sw[1]),
     .Y(led[0]),
@@ -21,10 +12,16 @@ module top (
   );
 
   // ones compliment 
-  ones_compliment inst(
+  ones_compliment ones_inst(
     .A(sw[5:2]),
     .B(sw[9:6]),
     .Y(led[5:2])
+  );
+
+  // twos compliment 
+  twos_compliment twos_inst(
+    .A(sw[9:2]),
+    .Y(led[13:6])
   );
   
 endmodule
