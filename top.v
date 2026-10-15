@@ -3,6 +3,9 @@ module top (
   output [9:0]led
 );
 
-  half-subtracter(
-
+  half_sub inst(
+    .A(sw[0]),
+    .B(sw[1]),
+    .Y(led[0]),
+    .Borrow(led[1])
   );
