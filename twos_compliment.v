@@ -35,6 +35,7 @@ module twos_compliment(
       );
 
       for(i=1; i<8; i=i+1)
+      begin
         full_adder add(
           .A(~A[i]),
           .B(1'b0),
@@ -42,6 +43,6 @@ module twos_compliment(
           .Cin(carry[i-1]),
           .Cout(carry[i])
       );
-
+      end
 endgenerate
 endmodule 
