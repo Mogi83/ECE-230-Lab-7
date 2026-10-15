@@ -3,9 +3,20 @@ module top (
   output [9:0]led
 );
 
+  // full adder
+  full_adder inst(
+      .A(sw[0]),
+      .B(sw[1]),
+      .Cin(1'b0),
+      .Y(led[0]),
+      .Cout(led[1])
+  );
+  
+  // half subtractor
   half_sub inst(
     .A(sw[0]),
     .B(sw[1]),
     .Y(led[0]),
     .Borrow(led[1])
   );
+
