@@ -15,7 +15,7 @@ In this lab you've learned the basics of number theory as it relates to subtract
 Group 9: Marina and Evan
 
 ## Summary
-In this lab we implemented a half subtractor, a full subtractor using one's complement, and finally a twos complement subtractor. 
+In this lab we implemented a half subtractor, summation with one's complement, and a converter for twos complement. We also were given a demonstration on how to implement a for loop in verilog. We implemented the for loop in our two's complement implementation. 
 
 ## Lab Questions
 
@@ -26,5 +26,5 @@ Functionally they are very similar except instead of assigning our carry to the 
 The end-carry is hard to implement because it’s the final carry-out of the whole addition, so it isn’t known until the carry has rippled through every full adder. Ones' complement then has to add that carry back into the LSB, which means a second addition on the result of the first. Connecting the carry-out directly to the first adder’s carry-in would create a combinational loop, because that carry-in would depend on its own input. So it takes two chains of full adders, which costs more hardware and a longer delay than two’s complement, where one adder chain with a +1 is enough.
 
 ### 3 - What is the edge case and problem with Two’s Complement number representation?
-The edge case is negating the minimum number, for a 8 bit value trying to find the two's complement for -128 
+The edge case is negating the minimum number. For an 8-bit value trying to find the two's complement of -128 doesn't work. Flipping the bits gives `0111 1111` (+127) and adding 1 overflows into the sign bit. The result is `1000 0000` which is -128 again.
 
