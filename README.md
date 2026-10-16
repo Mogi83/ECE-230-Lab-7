@@ -15,7 +15,7 @@ In this lab you've learned the basics of number theory as it relates to subtract
 Group 9: Marina and Evan
 
 ## Summary
-In this lab we implemented a half subtractor, a full subtractor using one's complement, and finally a twos complement subtractor. 
+In this lab we implemented a half subtractor, summation with one's complement, and a converter for twos complement. We also were given a demonstration on how to implement a for loop in verilog. We implemented the for loop in our two's complement implementation. 
 
 ## Lab Questions
 
@@ -26,5 +26,5 @@ Functionally they are very similar except instead of assigning our carry to the 
 The wrap around behavior of ones complement is difficult to implement because you need to pay specific attention to the carry out and ensure that it is added as the next carry in. 
 
 ### 3 - What is the edge case and problem with Two’s Complement number representation?
-The edge case is negating the minimum number, for a 8 bit value trying to find the two's complement for -128 
+The edge case is negating the minimum number. For an 8-bit value trying to find the two's complement of -128 doesn't work. Flipping the bits gives `0111 1111` (+127) and adding 1 overflows into the sign bit. The result is `1000 0000` which is -128 again.
 
