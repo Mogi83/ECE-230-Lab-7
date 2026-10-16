@@ -20,7 +20,7 @@ In this lab we implemented a half subtractor, summation with one's complement, a
 ## Lab Questions
 
 ### 1 - Explain the differences between our Half Adder from last lab and the Half Subtractor from this lab.
-Functionally they are very similar except instead of assigning our carry to the result of `A & B` we are assigning our carry(borrow) as `(~A & B)` to denote that we are subtracting.
+Functionally they are very similar except instead of assigning our carry to the result of `A & B` we are assigning our carry(borrow) as `(~A & B)`
 
 ### 2 - What about the end around carry of One’s Complement makes it hard to use and implement?
 The end-carry is hard to implement because it’s the final carry-out of the whole addition, so it isn’t known until the carry has rippled through every full adder. Ones' complement then has to add that carry back into the LSB, which means a second addition on the result of the first. Connecting the carry-out directly to the first adder’s carry-in would create a combinational loop, because that carry-in would depend on its own input. So it takes two chains of full adders, which costs more hardware and a longer delay than two’s complement, where one adder chain with a +1 is enough.
