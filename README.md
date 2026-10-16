@@ -15,7 +15,7 @@ In this lab you've learned the basics of number theory as it relates to subtract
 Group 9: Marina and Evan
 
 ## Summary
-In this lab we implemented a half subtractor, summation with one's complement, and a converter for twos complement. We also were given a demonstration on how to implement a for loop in verilog. 
+In this lab we implemented a half subtractor, summation with one's complement, and a converter for twos complement. We also were given a demonstration on how to implement a for loop in verilog.
 
 ## Lab Questions
 
