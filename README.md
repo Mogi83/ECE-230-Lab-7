@@ -26,5 +26,5 @@ Functionally they are very similar except instead of assigning our carry to the 
 The wrap around behavior of ones complement is difficult to implement because you need to pay specific attention to the carry out and ensure that it is added as the next carry in. 
 
 ### 3 - What is the edge case and problem with Two’s Complement number representation?
-The edge case is negating the minimum number, for a 8 bit  
+The edge case is negating the minimum number, for a 8 bit value trying to find the two's complement for -128 
 
